@@ -40,6 +40,7 @@ infile = open("eq_data.json", "r")
 earthquakes = json.load(infile)
 
 # 1) print out the number of earthquakes
+print()
 print("Number of earthqakes:", len(earthquakes["features"]))
 print()
 
@@ -62,8 +63,9 @@ for earthquake in earthquakes["features"]:
 
         a += 1
 
+print()
 print(eq_dict)
-
+print()
 
 # 3) using the eq_dict dictionary, print out the information as shown below (first three shown):
 
