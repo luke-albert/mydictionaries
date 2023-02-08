@@ -40,12 +40,16 @@ infile = open("eq_data.json", "r")
 earthquakes = json.load(infile)
 
 # 1) print out the number of earthquakes
-print(len(earthquakes["features"]))
+print("Number of earthqakes:", len(earthquakes["features"]))
 print()
 
 a = 1
 eq_dict = {}
+
+
 # 2) iterate through the dictionary
+
+
 for earthquake in earthquakes["features"]:
     if earthquake["properties"]["mag"] > 6:
 
