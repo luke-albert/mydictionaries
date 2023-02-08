@@ -41,6 +41,8 @@ earthquakes = json.load(infile)
 
 print(len(earthquakes["features"]))
 
+"""
 for earthquake in earthquakes:
     if earthquake["mag"] > 6:
         print(earthquake["features"])
+"""
