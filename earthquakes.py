@@ -41,6 +41,7 @@ earthquakes = json.load(infile)
 
 # 1) print out the number of earthquakes
 print(len(earthquakes["features"]))
+print()
 
 
 # 2) iterate through the dictionary
@@ -51,11 +52,12 @@ for earthquake in earthquakes["features"]:
         eq_dict["Magnitude"] = earthquake["properties"]["mag"]
         eq_dict["Longitude"] = earthquake["geometry"]["coordinates"][0]
         eq_dict["Latitude"] = earthquake["geometry"]["coordinates"][1]
+
         print(eq_dict)
 
-        # 3) using the eq_dict dictionary, print out the information as shown below (first three shown):
+# 3) using the eq_dict dictionary, print out the information as shown below (first three shown):
 
-
+"""
 for earthquake in earthquakes["features"]:
     if earthquake["properties"]["mag"] > 6:
         eq_dict = {}
@@ -68,3 +70,11 @@ for earthquake in earthquakes["features"]:
         print("Magnitude:", eq_dict["Magnitude"])
         print("Longitude:", eq_dict["Longitude"])
         print("Latitude:", eq_dict["Latitude"])
+"""
+print()
+for eq in eq_dict:
+    print("Location:", eq_dict["Location"])
+    print("Magnitude:", eq_dict["Magnitude"])
+    print("Longitude:", eq_dict["Longitude"])
+    print("Latitude:", eq_dict["Latitude"])
+    print()
