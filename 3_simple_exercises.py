@@ -8,7 +8,7 @@ sampleDict = {
 score = sampleDict["class"]["student"]["marks"][
     "history"
 ]  # this is how to drill down in a nested dictionary
-print(score)
+print(score)  # will print jsut the score which is 80
 
 
 # 2) Add 2 inches to the son's height. (not hardcoded value because they didnt give a specific value)
