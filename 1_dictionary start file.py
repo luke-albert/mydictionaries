@@ -2,17 +2,17 @@ import random
 
 phonebook = {}
 phonebook = {"Chris": "555−1111", "Katie": "555−2222", "Joanne": "555−3333"}
-"""
-mydictionary = dict(m=8, n=9)
+
+mydictionary = dict(m=8, n=9)  # creates a dictonary
 
 print(mydictionary)
 
-print(f"Number of key value pairs: {len(phonebook)}")
+print(f"Number of key value pairs: {len(phonebook)}")  # len prints the number of keys
 
-
+"""
 
 print()
-print('*****  start section 1 - print dictionary ********')
+print("*****  start section 1 - print dictionary ********")
 print()
 
 
@@ -32,7 +32,7 @@ print("*****  start section 2 - search dictionary ********")
 print()
 
 
-name = "chris"
+name = "chris" #case sensitive
 
 if name in phonebook:
     print(phonebook[name])
@@ -58,7 +58,7 @@ phonebook["Chris"] = "555-4444"
 
 phonebook["Joe"] = "555-0123"
 
-print(phonebook)
+print(phonebook) #will print the updated version
 
 
 print()
@@ -74,7 +74,7 @@ print("*****  start section 4 - delete/remove from dictionary ********")
 print()
 
 print(phonebook)
-del phonebook["Chris"]
+del phonebook["Chris"] #deletes everything about Chris
 print(phonebook)
 
 
@@ -85,21 +85,20 @@ print()
 
 
 
-
 print()
 print("*****  start section 5 - iterate through keys, values, items ********")
 print()
 
 for key in phonebook:
-    print(f"The key is: {key} and the value {phonebook[value]}")
+    print(f"The key is: {key} and the value {phonebook[key]}")
 
 for value in phonebook.values():
     print(value)
 
 for k, v in phonebook.items():
-    print(f"The key is: {k} and the value is {phonebook[v]}")
+    print(f"The key is: {k} and the value is {v}")
 
-for ph_tuple in phonebook.items():
+for ph_tuple in phonebook.items(): #make it a tuple
     print(ph_tuple)
 
 
@@ -115,11 +114,11 @@ print()
 print("*****  start section 6 - using get and clear ********")
 print()
 
-name = "chris"
+name = "Chris"
 
-phone = phonebook.get(name, "key not found")
+phone = phonebook.get(name, "key not found") # will print "key not found" if it doesnt find it (it is very case sensitive)
 
-print(phone)
+print(phone)  
 
 
 phonebook.clear()
@@ -137,10 +136,10 @@ print("*****  start section 7 - using pop method ********")
 print()
 
 
-remove = phonebook.pop("Chris", "not found")
+remove = phonebook.pop("Chris", "not found") #removes key and value
 
-print(remove)
-print(phonebook)
+print(remove) #what is getting removed
+print(phonebook) #the new updated phonebook
 
 print()
 print("*****  end section 7 ********")
@@ -153,7 +152,7 @@ print("*****  start section 8 - using popitem ********")
 print()
 
 
-a = phonebook.popitem() #pops out the last item
+a = phonebook.popitem()  # pops out the last item
 
 print(a)
 
@@ -170,8 +169,10 @@ print()
 print("*****  start section 9 - using random and converting to list ********")
 print()
 
-list_of_keys = list(phonebook)
-random_key = random.choice(list_of_keys)  # give you a name randomly at a time
+list_of_keys = list(
+    phonebook
+)  # making a list of the dictionary just makes a list of the keys
+random_key = random.choice(list_of_keys)  # give you a name(key) randomly at a time
 print(random_key)
 print(phonebook[random_key])  # gives you random name along with their phone number
 

@@ -90,7 +90,7 @@ def deal_cards(deck, number):  # deck and number are both parameters
     # DATA VALIDATION
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck (52).
-    if number > len(deck):
+    if number > len(deck):  # amount of keys
         number = len(deck)
 
     # Deal the cards and accumulate their values.

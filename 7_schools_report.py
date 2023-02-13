@@ -20,7 +20,7 @@ Display report for all universities that have a total price for in-state student
 
 import json
 
-infile = open("school_data.json", "r")
+infile = open("school_data.json", "r")  # opened to read
 
 schools = json.load(infile)
 conference_schools = [372, 108, 107, 130]
