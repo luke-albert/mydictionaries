@@ -74,7 +74,7 @@ print("*****  start section 4 - delete/remove from dictionary ********")
 print()
 
 print(phonebook)
-del phonebook["Chris"] #deletes everything about Chris
+del phonebook["Chris"] #deletes everything about Chris (key and value)
 print(phonebook)
 
 
@@ -90,15 +90,17 @@ print("*****  start section 5 - iterate through keys, values, items ********")
 print()
 
 for key in phonebook:
-    print(f"The key is: {key} and the value {phonebook[key]}")
+    print(
+        f"The key is: {key} and the value {phonebook[key]}"
+    )  # will iterate through each key
 
 for value in phonebook.values():
-    print(value)
+    print(value)  # just the values for each key
 
 for k, v in phonebook.items():
-    print(f"The key is: {k} and the value is {v}")
+    print(f"The key is: {k} and the value is {v}")  # iterates through each key
 
-for ph_tuple in phonebook.items(): #make it a tuple
+for ph_tuple in phonebook.items():  # make it a tuple (3 separate tuples for each key)
     print(ph_tuple)
 
 
@@ -163,7 +165,7 @@ print()
 print("*****  end section 8 ********")
 print()
 
-"""
+
 
 print()
 print("*****  start section 9 - using random and converting to list ********")
@@ -184,3 +186,5 @@ print(
 print()
 print("*****  end section 9 ********")
 print()
+
+"""
